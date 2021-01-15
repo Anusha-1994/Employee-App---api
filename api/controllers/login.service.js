@@ -1,13 +1,10 @@
 const db            = require("../helpers/db");  
 const User          = db.Users;
-const UserRequest   = db.UserReq;
 const constants     = require('../config/constants') 
 const passwordHash  = require('password-hash');
 const jwt           = require('jsonwebtoken');
 const errorCode     = require('../config/errorCode')
-const validation    = require('../helpers/validation')
 const config        = require('../config/config')
-const jwtDecode     = require('jwt-decode');
 
 exports.login = (async (request, response) => {
 
